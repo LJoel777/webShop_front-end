@@ -14,6 +14,11 @@ const ProductContainer = styled.div`
   flex-wrap: wrap;
   margin-left: 5px;
   margin-right: 5px;
+  h1 {
+    font-weight: bold;
+    font-size: 4rem;
+    margin-top: 10px;
+  }
 
   hr {
     border-top: 2px solid #d5d5d5;
@@ -30,8 +35,7 @@ function Main() {
       <h1>Products</h1>
       <hr />
       {shoeList.map((shoe, index) => {
-        console.log(shoe);
-        return <Card key={index} shoe={shoe} />;
+        return <Card key={index} shoe={shoe} index={index} />;
       })}
     </ProductContainer>
   );

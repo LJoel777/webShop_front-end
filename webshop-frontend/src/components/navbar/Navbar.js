@@ -3,6 +3,9 @@ import logo from "../../images/logo.png";
 import styled from "styled-components";
 
 const Nav = styled.nav`
+  position: sticky;
+  z-index: 100;
+  top: 0;
   display: flex;
   flex-direction: row;
   max-height: 10vh;
@@ -41,7 +44,7 @@ const Nav = styled.nav`
   }
 
   @media (max-width: 900px) {
-    position: relative;
+    position: sticky;
 
     .logo {
       z-index: 4;

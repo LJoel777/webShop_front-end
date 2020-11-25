@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
+import ReactDOM from "react-dom";
 import styled from "styled-components";
 
 const CardDiv = styled.div`
@@ -9,7 +10,10 @@ const CardDiv = styled.div`
   flex-basis: 100px;
   padding: 0.3rem 2rem;
   background-color: white;
-
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: translate(0, -10px);
+  }
   .sneaker {
     min-height: 200px;
     display: flex;
@@ -52,7 +56,7 @@ function Card(props) {
   return (
     <CardDiv>
       <div className="sneaker">
-        <img src={props.shoe} alt="shoe" className="card-img" />
+        <img src={props.shoe} alt="shoe" className={`card-img${props.index}`} />
       </div>
       <div className="card-body">
         <h1 className="title">Adidas ZX</h1>
@@ -61,5 +65,4 @@ function Card(props) {
     </CardDiv>
   );
 }
-
 export default Card;
