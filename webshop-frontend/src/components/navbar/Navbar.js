@@ -7,6 +7,7 @@ const Nav = styled.nav`
   flex-direction: row;
   max-height: 10vh;
   background-color: #eae0ef;
+  font-family: "Lobster", cursive;
 
   .logo {
     flex-grow: 1;
@@ -23,8 +24,6 @@ const Nav = styled.nav`
     list-style: none;
 
     a {
-      margin-right: 10px;
-      margin-left: 10px;
       flex-grow: 1;
       font-size: 35px;
       padding: 10px;
@@ -41,14 +40,15 @@ const Nav = styled.nav`
     }
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 900px) {
     position: relative;
 
     .logo {
-      z-index: 2;
+      z-index: 4;
     }
 
     .links {
+      z-index: 3;
       position: fixed;
       display: flex;
       flex-direction: column;
