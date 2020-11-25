@@ -9,7 +9,7 @@ const Nav = styled.nav`
   display: flex;
   flex-direction: row;
   max-height: 10vh;
-  background-color: #eae0ef;
+  background-color: white;
   font-family: "Lobster", cursive;
 
   .logo {

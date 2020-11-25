@@ -14,7 +14,9 @@ const ProductContainer = styled.div`
   flex-wrap: wrap;
   margin-left: 5px;
   margin-right: 5px;
+
   h1 {
+    font-family: "Lobster", cursive;
     font-weight: bold;
     font-size: 4rem;
     margin-top: 10px;
@@ -29,7 +31,7 @@ const ProductContainer = styled.div`
 `;
 
 function Main() {
-  const shoeList = [Shoe3, Shoe3, Shoe3, Shoe4, Shoe5, Shoe5, Shoe5];
+  const shoeList = [Shoe3, Shoe3, Shoe3, Shoe4, Shoe4, Shoe4, Shoe5, Shoe5, Shoe5];
   return (
     <ProductContainer>
       <h1>Products</h1>
