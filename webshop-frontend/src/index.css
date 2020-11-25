@@ -1,12 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+:root {
+  --primaryColor: #ffffff;
+  --secondaryColor: #683a88;
+  --tertiaryColor: #00000080;
+  --quarterlyColor: #553d67;
+}
+
 html {
   min-width: 100vw;
   min-height: 100vh;
+  background: var(--primaryColor);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lobster", cursive;
 }
 img {
   max-width: 100%;

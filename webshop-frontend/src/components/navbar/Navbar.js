@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
-import logo from "../../images/logo777.png";
+import logo from "../../images/logo.png";
 import styled from "styled-components";
 
 const Nav = styled.nav`
   display: flex;
   flex-direction: row;
   max-height: 10vh;
-  background: #ebe9e9;
+  background-color: #eae0ef;
 
   .logo {
     flex-grow: 1;
@@ -14,7 +14,7 @@ const Nav = styled.nav`
     max-width: 225px;
   }
   .links {
-    margin: 0;
+    margin-bottom: 0;
     flex-grow: 2;
     display: flex;
     flex-direction: row;
@@ -23,18 +23,19 @@ const Nav = styled.nav`
     list-style: none;
 
     a {
+      margin-right: 10px;
+      margin-left: 10px;
       flex-grow: 1;
       font-size: 35px;
-      font-weight: 700;
       padding: 10px;
       text-decoration: none;
-      color: rgb(190, 185, 185);
+      color: var(--tertiaryColor);
       border-radius: 10px;
       &.active {
         color: black;
       }
       &:hover {
-        background-color: black;
+        background-color: var(--secondaryColor);
         color: white;
       }
     }
@@ -72,6 +73,14 @@ const Nav = styled.nav`
 
       &.toggle {
         clip-path: circle(1000px at 90% -10%);
+        a {
+          &.active {
+            color: var(--secondaryColor);
+          }
+          &:hover {
+            color: white;
+          }
+        }
       }
     }
     .switch {
@@ -80,13 +89,17 @@ const Nav = styled.nav`
       top: 50%;
       right: 5%;
       transform: translate(-5%, -50%);
-    }
-
-    .bars {
-      background: black;
-      margin: 3px;
-      width: 30px;
-      height: 4px;
+      .bars {
+        background: black;
+        margin: 3px;
+        width: 30px;
+        height: 4px;
+      }
+      &.toggle {
+        .bars {
+          background: var(--primaryColor);
+        }
+      }
     }
   }
 `;
@@ -96,6 +109,7 @@ function Navbar() {
     let links = document.querySelector(".links");
     document.querySelector(".switch").addEventListener("click", () => {
       links.classList.toggle("toggle");
+      document.querySelector(".switch").classList.toggle("toggle");
     });
   });
 
