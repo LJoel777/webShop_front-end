@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import logo from "../../images/logo.png";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Nav = styled.nav`
   position: sticky;
@@ -118,14 +119,18 @@ function Navbar() {
 
   return (
     <Nav className="nav">
-      <div className="logo">
-        <img src={logo} alt="logo" />
-      </div>
+      <Link to="/">
+        <div className="logo">
+          <img src={logo} alt="logo" />
+        </div>
+      </Link>
       <ul className="links">
         <li>
-          <a className="active" href="#">
-            Home
-          </a>
+          <Link to="/">
+            <a className="active" href="#">
+              Home
+            </a>
+          </Link>
         </li>
         <li>
           <a href="#"> About</a>

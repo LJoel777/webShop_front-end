@@ -5,6 +5,7 @@
   --secondaryColor: #683a88;
   --tertiaryColor: #00000080;
   --quarterlyColor: #553d67;
+  perspective: 1000px;
 }
 
 html {
@@ -18,4 +19,14 @@ html {
 }
 img {
   max-width: 100%;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: black;
 }
