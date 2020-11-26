@@ -17,6 +17,7 @@ const CardContainer = styled.div`
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
     border-radius: 30px;
     padding: 0rem 5rem;
+    transition: all 0.5s ease;
   }
 
   .sneaker {
@@ -26,8 +27,8 @@ const CardContainer = styled.div`
     justify-content: center;
   }
 
-  .sneaker .img {
-    transition: all 1s ease-in-out;
+  .sneaker img {
+    transition: all 0.5s ease;
     z-index: 2;
     width: 20rem;
   }
@@ -43,10 +44,10 @@ const CardContainer = styled.div`
 
   .info h1 {
     font-size: 3rem;
+    transition: all 0.5s ease;
   }
 
   .info h3 {
-    transition: all 1s ease-in-out;
     transition: all 0.5s ease;
     font-size: 1.3rem;
     padding: 2rem 0rem;
@@ -66,10 +67,10 @@ const CardContainer = styled.div`
   .sizes {
     display: flex;
     justify-content: space-between;
+    transition: all 0.5s ease;
   }
 
   .sizes button {
-    transition: all 1s ease-in-out;
     padding: 0.5rem 2rem;
     background: none;
     border: none;
@@ -89,7 +90,7 @@ const CardContainer = styled.div`
   }
 
   .purchase button {
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease;
     width: 100%;
     padding: 1rem 0rem;
     background: #f54642;
@@ -112,10 +113,6 @@ const DetailCard = () => {
 
   const mouseLeave = (e) => {
     card.current.style.transition = "all 0.5s ease";
-    sneaker.current.style.transition = "all 0.5s ease";
-    title.current.style.transition = "all 0.5s ease";
-    sizes.current.style.transition = "all 0.5s ease";
-    purchase.current.style.transition = "all 0.5s ease";
     card.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
     sneaker.current.style.transform = "translateZ(0px) rotateZ(0deg)";
     title.current.style.transform = "translateZ(0px)";
